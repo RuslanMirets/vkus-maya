@@ -1,0 +1,160 @@
+<header class="header">
+	<div class="container">
+		<div class="header__body">
+			<a class="header__logo" href="/">
+				<img src="@img/logo.svg" alt="Logo" width="186" height="85" />
+			</a>
+			<a class="header__phone-link" href="tel:88007759868">8 (800) 775-98-68</a>
+			<div class="header__mobile-buttons">
+				<button class="header__burger burger" data-burger>
+					<img
+						class="burger__img-open"
+						src="@img/icons/burger.svg"
+						alt="Menu"
+					/>
+					<img
+						class="burger__img-close"
+						src="@img/icons/burger-close.svg"
+						alt="Close menu"
+					/>
+				</button>
+				<button class="header__phone-mobile" data-modal-path="call">
+					<img src="@img/icons/phone-white.svg" alt="" />
+				</button>
+			</div>
+			<nav class="header__menu menu">
+				<ul class="menu__list">
+					<li>
+						<button class="menu__button">
+							О компании
+							<svg
+								width="8"
+								height="5"
+								viewBox="0 0 8 5"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
+									fill="#393939"
+								/>
+							</svg>
+						</button>
+						<ul class="menu__submenu">
+							<li><a href="#">Наша команда</a></li>
+							<li><a href="#">Наша жизнь</a></li>
+							<li><a href="#">Наши достижения</a></li>
+						</ul>
+					</li>
+					<li>
+						<button class="menu__button">
+							Продукция
+							<svg
+								width="8"
+								height="5"
+								viewBox="0 0 8 5"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
+									fill="#393939"
+								/>
+							</svg>
+						</button>
+						<ul class="menu__submenu">
+							<li><a href="#">Продукция 1</a></li>
+							<li><a href="#">Продукция 2</a></li>
+							<li><a href="#">Продукция 3</a></li>
+						</ul>
+					</li>
+					<li>
+						<button class="menu__button">
+							Партнерам
+							<svg
+								width="8"
+								height="5"
+								viewBox="0 0 8 5"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
+									fill="#393939"
+								/>
+							</svg>
+						</button>
+						<ul class="menu__submenu">
+							<li><a href="#">Ссылка 1</a></li>
+							<li><a href="#">Ссылка 2</a></li>
+							<li><a href="#">Ссылка 3</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Вакансии</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<button class="header__phone-button" data-modal-path="call">
+				<span class="header__phone-button-text">Заказать звонок</span>
+				<span class="header__phone-button-icon">
+					<img src="@img/icons/phone-red.svg" alt="" />
+				</span>
+			</button>
+		</div>
+	</div>
+</header>
+
+<nav class="header__menu-mobile mobile-menu" data-mobile-menu>
+	<ul class="mobile-menu__list">
+		<li>
+			<button class="mobile-menu__button">
+				О компании <img src="@img/icons/mm-arrow-right.svg" alt="" />
+			</button>
+			<ul class="mobile-menu__submenu">
+				<li>
+					<button class="mobile-menu__submenu-back">
+						<img src="@img/icons/mm-arrow-left.svg" alt="" />Назад
+					</button>
+				</li>
+				<li><p class="mobile-menu__submenu-title">О компании</p></li>
+				<li><a href="#">Наша команда</a></li>
+				<li><a href="#">Наша жизнь</a></li>
+				<li><a href="#">Наши достижения</a></li>
+			</ul>
+		</li>
+		<li>
+			<button class="mobile-menu__button">
+				Продукция <img src="@img/icons/mm-arrow-right.svg" alt="" />
+			</button>
+			<ul class="mobile-menu__submenu">
+				<li>
+					<button class="mobile-menu__submenu-back">
+						<img src="@img/icons/mm-arrow-left.svg" alt="" />Назад
+					</button>
+				</li>
+				<li><p class="mobile-menu__submenu-title">Продукция</p></li>
+				<li><a href="#">Продукция 1</a></li>
+				<li><a href="#">Продукция 2</a></li>
+				<li><a href="#">Продукция 3</a></li>
+			</ul>
+		</li>
+		<li>
+			<button class="mobile-menu__button">
+				Партнерам <img src="@img/icons/mm-arrow-right.svg" alt="" />
+			</button>
+			<ul class="mobile-menu__submenu">
+				<li>
+					<button class="mobile-menu__submenu-back">
+						<img src="@img/icons/mm-arrow-left.svg" alt="" />Назад
+					</button>
+				</li>
+				<li><p class="mobile-menu__submenu-title">Партнерам</p></li>
+				<li><a href="#">Ссылка 1</a></li>
+				<li><a href="#">Ссылка 2</a></li>
+				<li><a href="#">Ссылка 3</a></li>
+			</ul>
+		</li>
+		<li><a class="mobile-menu__link" href="#">Вакансии</a></li>
+		<li><a class="mobile-menu__link" href="#">Контакты</a></li>
+	</ul>
+</nav>

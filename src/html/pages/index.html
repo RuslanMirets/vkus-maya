@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+	@@include('../components/page-blocks/head.html', {"title": "Главная"})
+	<body class="page__body">
+		<div class="site-container">
+			@@include('../components/page-blocks/header.html')
+			<main class="main">
+				@@include('../components/home/intro.html')
+				@@include('../components/home/categories.html')
+				@@include('../components/home/benefits.html')
+				@@include('../components/home/products.html')
+				@@include('../components/home/distributors.html')
+				@@include('../components/home/geography.html')
+				@@include('../components/home/history.html')
+			</main>
+			@@include('../components/page-blocks/footer.html')
+		</div>
+		@@include('../components/modals/call-modal.html')
+	</body>
+</html>

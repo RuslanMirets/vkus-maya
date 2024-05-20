@@ -1,0 +1,53 @@
+{
+	"name": "gulp-mirets",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build --build"
+	},
+	"keywords": [],
+	"author": "Ruslan Mirets",
+	"license": "ISC",
+	"devDependencies": {
+		"@prettier/plugin-pug": "^2.3.0",
+		"browser-sync": "^2.27.10",
+		"del": "^7.0.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-avif": "^1.1.1",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-favicons": "^3.0.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-filter": "^7.0.0",
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-if": "^3.0.0",
+		"gulp-imagemin": "^8.0.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-pug": "^5.0.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-replace": "^1.1.3",
+		"gulp-sass": "^5.1.0",
+		"gulp-svg-sprite": "^2.0.0",
+		"gulp-typograf": "^4.0.3",
+		"gulp-version-number": "^0.2.4",
+		"gulp-webp": "^4.0.1",
+		"gulp-webpcss": "^1.1.1",
+		"imagemin-mozjpeg": "^10.0.0",
+		"imagemin-optipng": "^8.0.0",
+		"prettier": "^2.7.1",
+		"sass": "^1.56.1",
+		"stylelint": "^14.14.1",
+		"stylelint-config-recommended-scss": "^8.0.0",
+		"stylelint-order": "^5.0.0",
+		"webp-converter": "2.2.3",
+		"webpack": "^5.75.0",
+		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"normalize.css": "^8.0.1"
+	}
+}

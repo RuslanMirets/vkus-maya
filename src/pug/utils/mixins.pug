@@ -1,0 +1,15 @@
+mixin svguse(nameId)
+	svg
+		use(xlink:href=`img/sprite.svg#${nameId}`)
+
+mixin burger
+	button.header__burger.burger(
+		aria-label="Открыть меню",
+		aria-expanded="false",
+		data-burger
+	)
+		span.burger__line
+
+mixin navItem(title, href)
+	li.nav__item&attributes(attributes)
+		a.nav__link(href=href) #{ title }

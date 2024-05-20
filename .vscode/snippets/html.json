@@ -1,0 +1,64 @@
+{
+	"svguse": {
+		"scope": "html",
+		"prefix": "g-use",
+		"body": [
+			"<svg class=\"\">",
+			"  <use xlink:href=\"img/sprite.svg#$2\"></use>",
+			"</svg>"
+		],
+		"description": "Snippet for use svg sprites"
+	},
+	"burger": {
+		"scope": "html",
+		"prefix": "g-burger",
+		"body": [
+			"<button class=\"header__burger burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
+			"  <span class=\"burger__line\"></span>",
+			"</button>"
+		],
+		"description": "Snippet for burger btn"
+	},
+	"picture": {
+		"prefix": "g-picture",
+		"body": [
+			"<picture>",
+			"  <source srcset=\"$1.webp\" type=\"image/webp\">",
+			"  <img src=\"$1\" loading=\"lazy\" alt=\"$2\">",
+			"</picture>"
+		],
+		"description": "Snippet for basic logo structure"
+	},
+	"svgimg": {
+		"scope": "html",
+		"prefix": "g-svgimg",
+		"body": ["<img loading=\"lazy\" src=\"$1\" alt=\"$2\">"],
+		"description": "Snippet for simple html svg images"
+	},
+	"navigation": {
+		"scope": "html",
+		"prefix": "g-nav",
+		"body": [
+			"<nav class=\"nav\" title=\"Меню\">",
+			"  <ul class=\"nav__list\">",
+			"    <li class=\"nav__item\"><a class=\"nav__link\" href=\"#\"></a></li>",
+			"    <li class=\"nav__item\"><a class=\"nav__link\" href=\"#\"></a></li>",
+			"    <li class=\"nav__item\"><a class=\"nav__link\" href=\"#\"></a></li>",
+			"  </ul>",
+			"</nav>"
+		],
+		"description": "Snippet for navigation"
+	},
+	"social": {
+		"scope": "html",
+		"prefix": "g-social",
+		"body": [
+			"<ul class=\"social\" title=\"Социальные сети\">",
+			"  <li class=\"social__item\"><a class=\"social__link\" href=\"#\" target=\"_blank\" aria-label=\"Наша страничка в Фейсбуке\"></a></li>",
+			"  <li class=\"social__item\"><a class=\"social__link\" href=\"#\" target=\"_blank\" aria-label=\"Наша страничка во Вконтакте\"></a></li>",
+			"  <li class=\"social__item\"><a class=\"social__link\" href=\"#\" target=\"_blank\" aria-label=\"Наша страничка в Твиттере\"></a></li>",
+			"</ul>"
+		],
+		"description": "Snippet for social links"
+	}
+}

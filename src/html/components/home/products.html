@@ -1,0 +1,680 @@
+<section class="products" id="section-products">
+	<div class="container">
+		<p class="subtitle">Вкусный и полезный перекус на любой вкус</p>
+		<h2 class="title">Это любят все</h2>
+		<div class="products__categories categories-products">
+			<div
+				class="categories-products__item active"
+				onclick="openCategoryTab(event, 'products-breakfast')"
+			>
+				Завтрак
+			</div>
+			<div
+				class="categories-products__item"
+				onclick="openCategoryTab(event, 'products-sport')"
+			>
+				Спорт
+			</div>
+			<div
+				class="categories-products__item"
+				onclick="openCategoryTab(event, 'products-children')"
+			>
+				Детям
+			</div>
+			<div
+				class="categories-products__item"
+				onclick="openCategoryTab(event, 'products-family')"
+			>
+				Для всей семьи
+			</div>
+			<div
+				class="categories-products__item"
+				onclick="openCategoryTab(event, 'products-different')"
+			>
+				Для разнообразия
+			</div>
+			<div
+				class="categories-products__item"
+				onclick="openCategoryTab(event, 'products-road')"
+			>
+				В дорогу
+			</div>
+		</div>
+
+		<div class="products__items">
+			<div
+				class="products__content content-products active"
+				id="products-breakfast"
+			>
+				<div class="swiper products__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-01.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-01.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Миндалики</p>
+									<p class="item-product__weight">250 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-02.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-02.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы Тамбовский багет</p>
+									<p class="item-product__weight">80 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-03.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-03.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">
+										Хлебцы бородинские с кориандром
+									</p>
+									<p class="item-product__weight">80 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div
+							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+						></div>
+						<div class="swiper-pagination products__swiper-pagination"></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+						></div>
+					</div>
+				</div>
+			</div>
+			<div class="products__content content-products" id="products-sport">
+				<div class="swiper products__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-04.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-04.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы спортивные</p>
+									<p class="item-product__weight">80 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-05.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-05.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы спортивные</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div
+							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+						></div>
+						<div class="swiper-pagination products__swiper-pagination"></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+						></div>
+					</div>
+				</div>
+			</div>
+			<div class="products__content content-products" id="products-children">
+				<div class="swiper products__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-06.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-06.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">
+										Хрустящие подушечки в ассортименте
+									</p>
+									<p class="item-product__weight">300 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-07.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-07.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">
+										Кукурузные палочки «Воздушные приключения»
+									</p>
+									<p class="item-product__weight">250 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-08.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-08.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Батончики в ассортименте</p>
+									<p class="item-product__weight">250 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div
+							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+						></div>
+						<div class="swiper-pagination products__swiper-pagination"></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+						></div>
+					</div>
+				</div>
+			</div>
+			<div class="products__content content-products" id="products-family">
+				<div class="swiper products__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-09.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-09.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">
+										Батончики без глазировки с разнообразной начинкой
+									</p>
+									<p class="item-product__weight">от 300 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-10.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-10.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">
+										Батончики глазированные с разнообразной начинкой
+									</p>
+									<p class="item-product__weight">от 300 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-11.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-11.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Миндалики в ассортименте</p>
+									<p class="item-product__weight">от 250 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-12.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-12.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы ржаные</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-13.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-13.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы гречневые</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div
+							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+						></div>
+						<div class="swiper-pagination products__swiper-pagination"></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+						></div>
+					</div>
+				</div>
+			</div>
+			<div class="products__content content-products" id="products-different">
+				<div class="swiper products__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-14.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-14.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы Восточные с куркумой</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-15.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-15.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы Пикантные с чесноком</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-16.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-16.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы ржаные с томатом</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-17.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-17.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы Оригинальные с луком</p>
+									<p class="item-product__weight">100 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div
+							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+						></div>
+						<div class="swiper-pagination products__swiper-pagination"></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+						></div>
+					</div>
+				</div>
+			</div>
+			<div class="products__content content-products" id="products-road">
+				<div class="swiper products__swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-18.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-18.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">
+										Хлебцы бородинские с кориандром
+									</p>
+									<p class="item-product__weight">25 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-19.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-19.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Хлебцы Тамбовский багет</p>
+									<p class="item-product__weight">25 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="products__item item-product">
+								<div class="item-product__content">
+									<picture>
+										<source
+											srcset="@img/products/product-20.webp"
+											type="image/webp"
+										/>
+										<img
+											class="item-product__img"
+											src="@img/products/product-20.png"
+											loading="lazy"
+											alt="Продукт"
+										/>
+									</picture>
+									<p class="item-product__title">Миндалики в ассортименте</p>
+									<p class="item-product__weight">от 250 гр.</p>
+								</div>
+								<a class="item-product__link" href="#">
+									<span class="item-product__link-text">Подробнее</span>
+									<span class="item-product__link-icon">
+										<img src="@img/icons/button-arrow.svg" alt="" />
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div
+							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+						></div>
+						<div class="swiper-pagination products__swiper-pagination"></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+						></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="products__info">
+			<img src="@img/icons/info.svg" alt="" />
+			<p>
+				ВАЖНО - Мы работаем только с оптовыми заказами. Продукция в розницу
+				поставляется через дистрибьюторов.
+			</p>
+		</div>
+	</div>
+</section>
