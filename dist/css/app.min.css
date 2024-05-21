@@ -1319,6 +1319,39 @@ a {
   gap: 2.4rem;
 }
 
+.map {
+  position: relative;
+}
+
+.map__button {
+  position: absolute;
+  right: 2rem;
+  top: 14.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 8.9rem;
+  height: 8.9rem;
+  background-color: var(--color-red);
+}
+
+.map__button img {
+  width: 2.6rem;
+  height: 2.4rem;
+}
+
+.map__iframe {
+  width: 100%;
+  height: 29.7rem;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 1.3020833333vw;
@@ -1640,6 +1673,14 @@ a {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 2.6rem;
     gap: 3rem 2rem;
+  }
+
+  .map__button {
+    top: 25.4rem;
+  }
+
+  .map__iframe {
+    height: 37.5rem;
   }
 }
 
@@ -2185,5 +2226,15 @@ a {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 4rem;
     gap: 4.5rem 5.5rem;
+  }
+
+  .map__button {
+    right: 14.3rem;
+    top: -11rem;
+  }
+
+  .map__iframe {
+    border-radius: 0 8rem 0 0;
+    height: 55.1rem;
   }
 }
