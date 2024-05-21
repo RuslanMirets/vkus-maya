@@ -1,7 +1,13 @@
 import Swiper from "swiper";
-import { Navigation, Pagination, EffectFade, FreeMode } from "swiper/modules";
+import {
+	Navigation,
+	Pagination,
+	EffectFade,
+	FreeMode,
+	Autoplay,
+} from "swiper/modules";
 
-Swiper.use([Navigation, Pagination, EffectFade, FreeMode]);
+Swiper.use([Navigation, Pagination, EffectFade, FreeMode, Autoplay]);
 
 // Webp check
 (function () {
@@ -221,6 +227,10 @@ const scrollbarWidth = scrollbarWidthHandler();
 		spaceBetween: 0,
 		effect: "fade",
 		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		pagination: {
 			el: ".intro__swiper-pagination",
 			clickable: true,
