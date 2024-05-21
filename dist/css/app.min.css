@@ -36,6 +36,7 @@
   --color-black: #393939;
   --color-red: #e72d30;
   --color-blue-gray: #f0f0f8;
+  --color-gray: #959595;
 }
 
 html {
@@ -239,6 +240,61 @@ a {
   width: 4.2rem;
   height: 4.2rem;
   background-color: var(--color-white);
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.label p {
+  padding: 0 3rem;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.label .highlight {
+  color: var(--color-red);
+}
+
+.input {
+  border: none;
+  border-radius: 3.1rem;
+  padding: 0 3rem;
+  width: 100%;
+  height: 6.2rem;
+  color: var(--color-black);
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--color-gray);
+}
+
+.input::-moz-placeholder {
+  color: var(--color-gray);
+}
+
+.input:-ms-input-placeholder {
+  color: var(--color-gray);
+}
+
+.input::-ms-input-placeholder {
+  color: var(--color-gray);
+}
+
+.input::placeholder {
+  color: var(--color-gray);
+}
+
+.input:focus-visible {
+  outline: none;
 }
 
 .swiper-controls {
@@ -1241,6 +1297,28 @@ a {
   color: var(--color-red);
 }
 
+.request {
+  margin-bottom: 3rem;
+  padding-top: 3.3rem;
+  padding-bottom: 4.7rem;
+}
+
+.request__privacy {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.request__privacy a {
+  text-decoration: underline;
+}
+
+.form-request {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 1.6rem;
+  gap: 2.4rem;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 1.3020833333vw;
@@ -1545,6 +1623,24 @@ a {
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem 2.6rem;
   }
+
+  .request {
+    margin-bottom: 8.5rem;
+    padding-top: 5rem;
+    padding-bottom: 9.8rem;
+  }
+
+  .form-request__button {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .form-request {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2.6rem;
+    gap: 3rem 2rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1567,6 +1663,14 @@ a {
     font-size: 5.2rem;
     line-height: 1.1;
     text-align: left;
+  }
+
+  .label p {
+    padding: 0 3.7rem;
+  }
+
+  .input {
+    padding: 0 3.7rem;
   }
 
   .swiper-controls .swiper-button-prev--gray,
@@ -2063,5 +2167,23 @@ a {
   .list-technology {
     -ms-grid-columns: (1fr)[5];
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .request__privacy {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .request {
+    margin-bottom: 13rem;
+    padding-top: 5.4rem;
+    padding-bottom: 14.8rem;
+  }
+
+  .form-request {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 4rem;
+    gap: 4.5rem 5.5rem;
   }
 }
