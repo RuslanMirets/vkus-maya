@@ -1706,3 +1706,59 @@ a {
 		width: calc(100% - 13.1rem);
 	}
 }
+
+.about {
+	margin-bottom: 3.5rem;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+
+		@media (min-width: 768px) {
+			gap: 4rem;
+		}
+
+		@media (min-width: 1200px) {
+			flex-direction: row;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		a {
+			display: inline-block;
+			text-decoration: underline;
+			color: var(--color-red);
+		}
+
+		@media (min-width: 768px) {
+			gap: 3rem;
+		}
+	}
+
+	&__picture {
+		@media (min-width: 1200px) {
+			flex-shrink: 0;
+		}
+	}
+
+	&__image {
+		border-radius: 3.5rem;
+		width: 100%;
+		height: 29.3rem;
+
+		@media (min-width: 768px) {
+			height: 56.1rem;
+		}
+
+		@media (min-width: 1200px) {
+			width: 52.4rem;
+			height: 56.1rem;
+			object-position: 22% 0;
+		}
+	}
+}
