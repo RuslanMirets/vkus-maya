@@ -1,52 +1,50 @@
-<section class="products" id="section-products">
+<section class="products" data-tabs-target="products">
 	<div class="container">
 		<p class="subtitle">Вкусный и полезный перекус на любой вкус</p>
 		<h2 class="title">Это любят все</h2>
-		<div class="products__categories categories-products">
-			<div
-				class="categories-products__item active"
-				onclick="openCategoryTab(event, 'products-breakfast')"
-			>
-				Завтрак
-			</div>
-			<div
-				class="categories-products__item"
-				onclick="openCategoryTab(event, 'products-sport')"
-			>
-				Спорт
-			</div>
-			<div
-				class="categories-products__item"
-				onclick="openCategoryTab(event, 'products-children')"
-			>
-				Детям
-			</div>
-			<div
-				class="categories-products__item"
-				onclick="openCategoryTab(event, 'products-family')"
-			>
-				Для всей семьи
-			</div>
-			<div
-				class="categories-products__item"
-				onclick="openCategoryTab(event, 'products-different')"
-			>
-				Для разнообразия
-			</div>
-			<div
-				class="categories-products__item"
-				onclick="openCategoryTab(event, 'products-road')"
-			>
-				В дорогу
-			</div>
-		</div>
 
-		<div class="products__items">
+		<div class="products__tabs tabs-products">
+			<ul class="tabs-products__list">
+				<li>
+					<button
+						class="tabs-products__button tabs-products__button--active"
+						data-tabs-path="breakfast"
+					>
+						Завтрак
+					</button>
+				</li>
+				<li>
+					<button class="tabs-products__button" data-tabs-path="sport">
+						Спорт
+					</button>
+				</li>
+				<li>
+					<button class="tabs-products__button" data-tabs-path="children">
+						Детям
+					</button>
+				</li>
+				<li>
+					<button class="tabs-products__button" data-tabs-path="family">
+						Для всей семьи
+					</button>
+				</li>
+				<li>
+					<button class="tabs-products__button" data-tabs-path="different">
+						Для разнообразия
+					</button>
+				</li>
+				<li>
+					<button class="tabs-products__button" data-tabs-path="road">
+						В дорогу
+					</button>
+				</li>
+			</ul>
+
 			<div
-				class="products__content content-products active"
-				id="products-breakfast"
+				class="tabs-products__content tabs-products__content--active"
+				data-tabs-target="breakfast"
 			>
-				<div class="swiper products__swiper">
+				<div class="swiper tabs-products__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="products__item item-product">
@@ -131,17 +129,19 @@
 					</div>
 					<div class="swiper-controls">
 						<div
-							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
 						></div>
-						<div class="swiper-pagination products__swiper-pagination"></div>
 						<div
-							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+							class="swiper-pagination tabs-products__swiper-pagination"
+						></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
 						></div>
 					</div>
 				</div>
 			</div>
-			<div class="products__content content-products" id="products-sport">
-				<div class="swiper products__swiper">
+			<div class="tabs-products__content" data-tabs-target="sport">
+				<div class="swiper tabs-products__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="products__item item-product">
@@ -198,17 +198,19 @@
 					</div>
 					<div class="swiper-controls">
 						<div
-							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
 						></div>
-						<div class="swiper-pagination products__swiper-pagination"></div>
 						<div
-							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+							class="swiper-pagination tabs-products__swiper-pagination"
+						></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
 						></div>
 					</div>
 				</div>
 			</div>
-			<div class="products__content content-products" id="products-children">
-				<div class="swiper products__swiper">
+			<div class="tabs-products__content" data-tabs-target="children">
+				<div class="swiper tabs-products__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="products__item item-product">
@@ -295,17 +297,19 @@
 					</div>
 					<div class="swiper-controls">
 						<div
-							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
 						></div>
-						<div class="swiper-pagination products__swiper-pagination"></div>
 						<div
-							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+							class="swiper-pagination tabs-products__swiper-pagination"
+						></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
 						></div>
 					</div>
 				</div>
 			</div>
-			<div class="products__content content-products" id="products-family">
-				<div class="swiper products__swiper">
+			<div class="tabs-products__content" data-tabs-target="family">
+				<div class="swiper tabs-products__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="products__item item-product">
@@ -444,17 +448,19 @@
 					</div>
 					<div class="swiper-controls">
 						<div
-							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
 						></div>
-						<div class="swiper-pagination products__swiper-pagination"></div>
 						<div
-							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+							class="swiper-pagination tabs-products__swiper-pagination"
+						></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
 						></div>
 					</div>
 				</div>
 			</div>
-			<div class="products__content content-products" id="products-different">
-				<div class="swiper products__swiper">
+			<div class="tabs-products__content" data-tabs-target="different">
+				<div class="swiper tabs-products__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="products__item item-product">
@@ -563,17 +569,19 @@
 					</div>
 					<div class="swiper-controls">
 						<div
-							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
 						></div>
-						<div class="swiper-pagination products__swiper-pagination"></div>
 						<div
-							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+							class="swiper-pagination tabs-products__swiper-pagination"
+						></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
 						></div>
 					</div>
 				</div>
 			</div>
-			<div class="products__content content-products" id="products-road">
-				<div class="swiper products__swiper">
+			<div class="tabs-products__content" data-tabs-target="road">
+				<div class="swiper tabs-products__swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="products__item item-product">
@@ -658,11 +666,13 @@
 					</div>
 					<div class="swiper-controls">
 						<div
-							class="swiper-button-prev swiper-button-prev--gray products__swiper-button-prev"
+							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
 						></div>
-						<div class="swiper-pagination products__swiper-pagination"></div>
 						<div
-							class="swiper-button-next swiper-button-next--gray products__swiper-button-next"
+							class="swiper-pagination tabs-products__swiper-pagination"
+						></div>
+						<div
+							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
 						></div>
 					</div>
 				</div>

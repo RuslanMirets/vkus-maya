@@ -1,3 +1,8 @@
+import Swiper from "swiper";
+import { Navigation, Pagination, EffectFade } from "swiper/modules";
+
+Swiper.use([Navigation, Pagination, EffectFade]);
+
 // Webp check
 (function () {
 	const webpCheck = (callback) => {
@@ -228,35 +233,48 @@ const scrollbarWidth = scrollbarWidthHandler();
 })();
 
 // Category tabs
-window.openCategoryTab = function openCategoryTab(event, tabId) {
-	const tabs = document.getElementsByClassName("categories-products__item");
-	for (let i = 0; i < tabs.length; i++) {
-		tabs[i].classList.remove("active");
-	}
-
-	event.currentTarget.classList.add("active");
-
-	const tabContents = document.getElementsByClassName("content-products");
-	for (let i = 0; i < tabContents.length; i++) {
-		tabContents[i].classList.remove("active");
-	}
-
-	const tabContent = document.getElementById(tabId);
-	tabContent.classList.add("active");
-};
-
-// Products swiper
 (function () {
-	new Swiper(".products__swiper", {
+	const tabs = document.querySelector(".tabs-products");
+	const tabsButton = document.querySelectorAll(".tabs-products__button");
+	const tabsContent = document.querySelectorAll(".tabs-products__content");
+
+	if (tabs) {
+		tabs.addEventListener("click", (e) => {
+			if (e.target.classList.contains("tabs-products__button")) {
+				const tabsPath = e.target.dataset.tabsPath;
+				tabsButton.forEach((el) => {
+					el.classList.remove("tabs-products__button--active");
+				});
+				document
+					.querySelector(`[data-tabs-path="${tabsPath}"]`)
+					.classList.add("tabs-products__button--active");
+				tabsHandler(tabsPath);
+			}
+		});
+
+		const tabsHandler = (path) => {
+			tabsContent.forEach((el) => {
+				el.classList.remove("tabs-products__content--active");
+			});
+			document
+				.querySelector(`[data-tabs-target="${path}"]`)
+				.classList.add("tabs-products__content--active");
+		};
+	}
+})();
+
+// Tabs products swiper
+(function () {
+	new Swiper(".tabs-products__swiper", {
 		slidesPerView: 2,
 		spaceBetween: 24,
 		pagination: {
-			el: ".products__swiper-pagination",
+			el: ".tabs-products__swiper-pagination",
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".products__swiper-button-next",
-			prevEl: ".products__swiper-button-prev",
+			nextEl: ".tabs-products__swiper-button-next",
+			prevEl: ".tabs-products__swiper-button-prev",
 		},
 		breakpoints: {
 			768: {
