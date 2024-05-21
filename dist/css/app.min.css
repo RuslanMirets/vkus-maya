@@ -338,6 +338,31 @@ a {
   background-repeat: no-repeat;
 }
 
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border: 0.3rem solid #f0f0f8;
+  border-radius: 3.5rem;
+  padding: 1.8rem 1.8rem 1.8rem 2.4rem;
+  gap: 1.5rem;
+}
+
+.info img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4.1rem;
+  height: 4.1rem;
+}
+
+.info p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
 .header__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -730,31 +755,6 @@ a {
 
 .products {
   margin-bottom: 3.6rem;
-}
-
-.products__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  border: 0.3rem solid #f0f0f8;
-  border-radius: 3.5rem;
-  padding: 1.8rem 1.8rem 1.8rem 2.4rem;
-  gap: 1.5rem;
-}
-
-.products__info img {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 4.1rem;
-  height: 4.1rem;
-}
-
-.products__info p {
-  font-size: 1.6rem;
-  line-height: 1.5;
 }
 
 .tabs-products__list {
@@ -1202,6 +1202,45 @@ a {
   height: 29.3rem;
 }
 
+.technology {
+  margin-bottom: 4rem;
+}
+
+.list-technology {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 3.5rem;
+  gap: 3rem;
+}
+
+.list-technology__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.list-technology__item-img {
+  margin-bottom: 2rem;
+  width: 8.9rem;
+  height: 8.9rem;
+}
+
+.list-technology__item-number {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--color-red);
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 1.3020833333vw;
@@ -1219,6 +1258,10 @@ a {
     height: 6rem;
     background-image: url("../img/waves-md.svg");
     background-position-x: -3.2rem;
+  }
+
+  .info {
+    padding: 2rem 8rem 2rem 3.3rem;
   }
 
   .header__body {
@@ -1336,10 +1379,6 @@ a {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 2.4rem 3.2rem;
-  }
-
-  .products__info {
-    padding: 2rem 8rem 2rem 3.3rem;
   }
 
   .products {
@@ -1481,6 +1520,31 @@ a {
   .about__image {
     height: 56.1rem;
   }
+
+  .about {
+    margin-bottom: 6rem;
+  }
+
+  .technology {
+    margin-bottom: 8rem;
+  }
+
+  .list-technology__item {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .list-technology__item-img {
+    margin-bottom: 3.5rem;
+  }
+
+  .list-technology {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 2.6rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1527,6 +1591,17 @@ a {
     margin-left: 13.1rem;
     border-radius: 8rem 0 0 8rem;
     padding-right: 13.1rem;
+  }
+
+  .info p {
+    font-size: 2rem;
+  }
+
+  .info {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2.2rem 3.4rem;
   }
 
   .header__body {
@@ -1821,17 +1896,6 @@ a {
     gap: 4rem 3.7rem;
   }
 
-  .products__info p {
-    font-size: 2rem;
-  }
-
-  .products__info {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 2.2rem 3.4rem;
-  }
-
   .products {
     margin-bottom: 13rem;
   }
@@ -1971,5 +2035,33 @@ a {
     height: 56.1rem;
     -o-object-position: 22% 0;
     object-position: 22% 0;
+  }
+
+  .about {
+    margin-bottom: 10rem;
+  }
+
+  .technology {
+    margin-bottom: 13rem;
+  }
+
+  .list-technology li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 3rem;
+    top: 4rem;
+    width: 7.8rem;
+    height: 1rem;
+    background-image: url("../img/icons/arrow-right-dotted.svg");
+    background-size: 100% 100%;
+  }
+
+  .list-technology li:not(:last-child) {
+    position: relative;
+  }
+
+  .list-technology {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
   }
 }

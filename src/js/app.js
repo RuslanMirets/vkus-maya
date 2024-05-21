@@ -1,7 +1,7 @@
 import Swiper from "swiper";
-import { Navigation, Pagination, EffectFade } from "swiper/modules";
+import { Navigation, Pagination, EffectFade, FreeMode } from "swiper/modules";
 
-Swiper.use([Navigation, Pagination, EffectFade]);
+Swiper.use([Navigation, Pagination, EffectFade, FreeMode]);
 
 // Webp check
 (function () {
