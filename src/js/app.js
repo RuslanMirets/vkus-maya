@@ -46,55 +46,45 @@ Swiper.use([Navigation, Pagination, EffectFade, FreeMode, Autoplay]);
 	return "unknown";
 })();
 
-// Scrollbar width
-const scrollbarWidthHandler = () => {
-	const getScrollbarWidth = () => {
-		const outer = document.createElement("div");
-		outer.style.visibility = "hidden";
-		outer.style.width = "100px";
-		outer.style.position = "absolute";
-		outer.style.top = "-9999px";
-		document.body.appendChild(outer);
+// Disable and enable scroll
+let scrollPosition;
+const disableScroll = () => {
+	scrollPosition = window.scrollY;
 
-		const widthNoScroll = outer.offsetWidth;
-		outer.style.overflow = "scroll";
+	const fixBlocks = document?.querySelectorAll(".fixed-block");
+	const paddingOffset = `${window.innerWidth - document.body.offsetWidth}px`;
+	fixBlocks.forEach((el) => {
+		el.style.paddingRight = paddingOffset;
+	});
 
-		const inner = document.createElement("div");
-		inner.style.width = "100%";
-		outer.appendChild(inner);
-
-		const widthWithScroll = inner.offsetWidth;
-		document.body.removeChild(outer);
-
-		return widthNoScroll - widthWithScroll;
-	};
-
-	const updateScrollbarWidth = () => {
-		let scrollbarWidth = getScrollbarWidth();
-		console.log(scrollbarWidth);
-	};
-
-	let scrollbarWidth = getScrollbarWidth();
-	window.addEventListener("load", updateScrollbarWidth);
-	window.addEventListener("resize", updateScrollbarWidth);
-
-	return scrollbarWidth;
+	document.body.style.paddingRight = paddingOffset;
+	document.body.classList.add("dis-scroll");
+	document.body.dataset.position = scrollPosition;
+	document.body.style.top = `-${scrollPosition}px`;
 };
-const scrollbarWidth = scrollbarWidthHandler();
+const enableScroll = () => {
+	const fixBlocks = document?.querySelectorAll(".fixed-block");
+	fixBlocks.forEach((el) => {
+		el.style.paddingRight = "0px";
+	});
+	document.body.style.paddingRight = "0px";
+
+	document.body.style.top = "auto";
+	document.body.classList.remove("dis-scroll");
+	window.scrollTo({ top: parseInt(scrollPosition, 10), left: 0 });
+	document.body.removeAttribute("data-position");
+};
 
 // Modal
 (function () {
 	const showModal = (overlay) => {
-		document.body.classList.add("dis-scroll");
-		console.log(scrollbarWidth);
-		document.body.style.paddingRight = `${scrollbarWidth}px`;
 		overlay.classList.add("modal-overlay--active");
+		disableScroll();
 	};
 
 	const closeModal = (overlay) => {
-		document.body.classList.remove("dis-scroll");
-		document.body.style.paddingRight = `0px`;
 		overlay.classList.remove("modal-overlay--active");
+		enableScroll();
 	};
 
 	const openButtons = document.querySelectorAll("[data-modal-path]");
@@ -122,11 +112,35 @@ const scrollbarWidth = scrollbarWidthHandler();
 
 				document.addEventListener("keydown", (e) => {
 					if (e.key === "Escape") {
-						console.log(overlay);
 						closeModal(overlay);
 					}
 				});
 			}
+		});
+	});
+})();
+
+// Call modal form
+(function () {
+	const forms = document.querySelectorAll(".call-modal");
+
+	forms.forEach((form) => {
+		const info = form.querySelector(".form-modal__info");
+		const success = form.querySelector(".form-modal__success");
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			// const formData = new FormData(e.target);
+			// const formProps = Object.fromEntries(formData);
+			// console.log(formProps);
+
+			info.classList.remove("form-modal__info--active");
+			success.classList.add("form-modal__success--active");
+		});
+
+		const successButtons = form.querySelector(".form-modal__success-button");
+		successButtons.addEventListener("click", (e) => {
+			info.classList.add("form-modal__info--active");
+			success.classList.remove("form-modal__success--active");
 		});
 	});
 })();

@@ -1,9 +1,71 @@
-<div class="modal" data-modal-target="call">
+<div class="modal form-modal call-modal" data-modal-target="call">
 	<div class="modal-overlay">
-		<div class="modal-content">
-			<button class="modal-close">Close</button>
-			<p>Это модальное окно!</p>
-			<button data-modal-path="test">OPEn modal</button>
+		<div class="modal-content form-modal__content">
+			<button class="modal-close form-modal__close">
+				<img src="@img/icons/cross.svg" alt="" />
+			</button>
+			<div class="form-modal__body">
+				<div class="form-modal__info form-modal__info--active">
+					<h2 class="form-modal__title">Заказать звонок</h2>
+					<form class="form-modal__form">
+						<label class="label">
+							<p>Ваше имя<span class="highlight">*</span>:</p>
+							<input class="input" type="text" name="name" placeholder="Имя" />
+						</label>
+						<label class="label">
+							<p>Название организации<span class="highlight">*</span>:</p>
+							<input
+								class="input"
+								type="text"
+								name="organization"
+								placeholder="ООО “Компания”"
+							/>
+						</label>
+						<label class="label">
+							<p>Город<span class="highlight">*</span>:</p>
+							<input
+								class="input"
+								type="text"
+								name="city"
+								placeholder="Москва"
+							/>
+						</label>
+						<label class="label">
+							<p>Ваш e-mail<span class="highlight">*</span>:</p>
+							<input
+								class="input"
+								type="email"
+								name="email"
+								placeholder="_@_"
+							/>
+						</label>
+						<label class="label">
+							<p>Ваш телефон<span class="highlight">*</span>:</p>
+							<input
+								class="input"
+								type="tel"
+								name="phone"
+								placeholder="+7 999 999 99 99"
+							/>
+						</label>
+						<button class="form-modal__form-button" type="submit">
+							Отправить
+						</button>
+					</form>
+					<p class="form-modal__privacy">
+						Нажимая кнопку, вы даете согласие на
+						<a href="#">обработку персональных данных</a>
+					</p>
+				</div>
+				<div class="form-modal__success">
+					<p class="form-modal__success-title">Спасибо.</p>
+					<p class="form-modal__success-text">
+						Ваша заявка отправлена. <br />
+						Отправить
+						<button class="form-modal__success-button">новую</button> заявку?
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -9,25 +9,35 @@
 		<form class="request__form form-request">
 			<label class="label">
 				<p>Ваше имя<span class="highlight">*</span>:</p>
-				<input class="input" class="input" type="text" placeholder="Имя" />
+				<input class="input" type="text" name="name" placeholder="Имя" />
 			</label>
 			<label class="label">
 				<p>Название организации<span class="highlight">*</span>:</p>
-				<input class="input" type="text" placeholder="ООО “Компания”" />
+				<input
+					class="input"
+					type="text"
+					name="organization"
+					placeholder="ООО “Компания”"
+				/>
 			</label>
 			<label class="label">
 				<p>Город<span class="highlight">*</span>:</p>
-				<input class="input" type="text" placeholder="Москва" />
+				<input class="input" type="text" name="city" placeholder="Москва" />
 			</label>
 			<label class="label">
 				<p>Ваш e-mail<span class="highlight">*</span>:</p>
-				<input class="input" type="email" placeholder="_@_" />
+				<input class="input" type="email" name="email" placeholder="_@_" />
 			</label>
 			<label class="label">
 				<p>Ваш телефон<span class="highlight">*</span>:</p>
-				<input class="input" type="tel" placeholder="+7 999 999 99 99" />
+				<input
+					class="input"
+					type="tel"
+					name="phone"
+					placeholder="+7 999 999 99 99"
+				/>
 			</label>
-			<button class="button form-request__button">
+			<button class="button form-request__button" type="submit">
 				<span>Получить прайс-лист</span>
 				<span><img src="@img/icons/price-list.svg" alt="" /></span>
 			</button>

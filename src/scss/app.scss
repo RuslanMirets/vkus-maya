@@ -175,9 +175,195 @@ a {
 	position: relative;
 	z-index: 1400;
 	display: grid;
+	border-radius: 3.5rem;
 	width: 100%;
 	max-width: 38rem;
 	background-color: var(--color-white);
+
+	@media (min-width: 768px) {
+		max-width: 72.8rem;
+	}
+
+	@media (min-width: 1200px) {
+		border-radius: 8rem;
+		max-width: 81.1rem;
+	}
+}
+
+.form-modal {
+	&__content {
+		background-color: var(--color-blue-gray);
+	}
+
+	&__close {
+		position: absolute;
+		right: 2.4rem;
+		top: 2.4rem;
+		z-index: 10;
+		width: 2rem;
+		height: 2rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		@media (min-width: 768px) {
+			right: 3rem;
+			top: 3rem;
+			width: 3.2rem;
+			height: 3.2rem;
+		}
+
+		@media (min-width: 1200px) {
+			right: 5.6rem;
+		}
+	}
+
+	&__body {
+		position: relative;
+		overflow: hidden;
+		border-radius: 3.5rem;
+		padding: 2.4rem 2.7rem 4rem;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 2.7rem;
+			background-image: url("../img/waves-sm.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			@media (min-width: 768px) {
+				height: 6rem;
+				background-image: url("../img/waves-md.svg");
+				background-position-x: -3.2rem;
+			}
+
+			@media (min-width: 1200px) {
+				height: 8rem;
+				background-image: url("../img/waves-lg.svg");
+				background-position-x: 0;
+			}
+		}
+
+		@media (min-width: 768px) {
+			padding: 8.2rem 2.7rem 11rem;
+		}
+
+		@media (min-width: 1200px) {
+			border-radius: 8rem;
+			padding: 8.2rem 2.7rem 12.4rem;
+		}
+	}
+
+	&__info {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2rem;
+		font-weight: 600;
+		font-size: 3.2rem;
+		line-height: 1.3;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media (min-width: 768px) {
+			margin-bottom: 4rem;
+			font-size: 4.8rem;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 5.2rem;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2.2rem;
+		gap: 2rem;
+
+		@media (min-width: 768px) {
+			margin: 0 auto 3.2rem;
+			width: 100%;
+			max-width: 51.7rem;
+			gap: 2.7rem;
+		}
+	}
+
+	&__form-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 1.5rem auto 0;
+		border-radius: 3.1rem;
+		width: 27.8rem;
+		height: 6.2rem;
+		text-align: center;
+		color: #fff;
+		background-color: var(--color-red);
+
+		@media (min-width: 768px) {
+			margin-top: 3rem;
+		}
+	}
+
+	&__privacy {
+		text-align: center;
+
+		a {
+			text-decoration: underline;
+			text-decoration-skip-ink: none;
+		}
+
+		@media (min-width: 768px) {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 41rem;
+		}
+	}
+
+	&__success {
+		display: none;
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__success-title {
+		margin-bottom: 2rem;
+		font-size: 3.2rem;
+
+		@media (min-width: 768px) {
+			font-size: 5.2rem;
+		}
+	}
+
+	&__success-text {
+		button {
+			text-decoration: underline;
+			text-transform: uppercase;
+			color: var(--color-red);
+			text-decoration-skip-ink: none;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 3.2rem;
+		}
+	}
 }
 
 .subtitle {
@@ -252,7 +438,7 @@ a {
 	gap: 0.7rem;
 
 	p {
-		padding: 0 3rem;
+		padding-left: 2rem;
 		font-weight: 500;
 		font-size: 2rem;
 		line-height: 1.4;
@@ -270,7 +456,7 @@ a {
 .input {
 	border: none;
 	border-radius: 3.1rem;
-	padding: 0 3rem;
+	padding: 0 2rem;
 	width: 100%;
 	height: 6.2rem;
 	color: var(--color-black);
@@ -372,7 +558,7 @@ a {
 		width: 100%;
 		height: 2.7rem;
 		background-image: url("../img/waves-sm.svg");
-		background-size: 100% 100%;
+		background-size: cover;
 		background-repeat: no-repeat;
 
 		@media (min-width: 768px) {
@@ -804,7 +990,7 @@ a {
 				width: 69.4rem;
 				height: 70.3rem;
 				background-image: url("../img/intro/bg.svg");
-				background-size: 100% 100%;
+				background-size: cover;
 				background-repeat: no-repeat;
 				transform: rotate(126deg);
 			}
@@ -1425,6 +1611,11 @@ a {
 	&__button {
 		margin: 0 auto;
 		width: 25.4rem;
+
+		img {
+			width: 0.7rem;
+			height: 1.1rem;
+		}
 	}
 
 	@media (min-width: 768px) {
@@ -1774,6 +1965,7 @@ a {
 			display: inline-block;
 			text-decoration: underline;
 			color: var(--color-red);
+			text-decoration-skip-ink: none;
 		}
 
 		@media (min-width: 768px) {
@@ -1901,6 +2093,7 @@ a {
 
 		a {
 			text-decoration: underline;
+			text-decoration-skip-ink: none;
 		}
 
 		@media (min-width: 1200px) {
@@ -1928,6 +2121,11 @@ a {
 	gap: 2.4rem;
 
 	&__button {
+		img {
+			width: 1.1rem;
+			height: 1.4rem;
+		}
+
 		@media (min-width: 768px) {
 			align-self: flex-end;
 		}
@@ -2052,6 +2250,11 @@ a {
 
 	&__button {
 		width: 27rem;
+
+		img {
+			width: 1.4rem;
+			height: 1.4rem;
+		}
 	}
 
 	&__copyright {
