@@ -145,6 +145,28 @@ const enableScroll = () => {
 	});
 })();
 
+// Price list modal form
+(function () {
+	const forms = document.querySelectorAll(".price-list-modal");
+
+	forms.forEach((form) => {
+		const info = form.querySelector(".form-modal__info");
+		const success = form.querySelector(".form-modal__success");
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			info.classList.remove("form-modal__info--active");
+			success.classList.add("form-modal__success--active");
+		});
+
+		const successButtons = form.querySelector(".form-modal__success-button");
+		successButtons.addEventListener("click", (e) => {
+			info.classList.add("form-modal__info--active");
+			success.classList.remove("form-modal__success--active");
+		});
+	});
+})();
+
 // Burger
 (function () {
 	const burger = document?.querySelector("[data-burger]");
