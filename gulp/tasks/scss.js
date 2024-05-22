@@ -32,8 +32,16 @@ export const scss = () => {
 				})
 			)
 			// Раскомментировать, если нужен не сжатый дубль стилей
-			// .pipe(app.gulp.dest(app.path.build.css))
-			.pipe(app.plugins.if(app.isBuild, cleanCss({ level: 2 })))
+			.pipe(app.gulp.dest(app.path.build.css))
+			.pipe(
+				app.plugins.if(
+					app.isBuild,
+					cleanCss({
+						level: 2,
+						compatibility: { properties: { zeroUnits: false } },
+					})
+				)
+			)
 			.pipe(rename({ extname: ".min.css" }))
 			.pipe(app.gulp.dest(app.path.build.css))
 			.pipe(app.plugins.browserSync.stream())
