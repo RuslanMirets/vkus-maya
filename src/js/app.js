@@ -226,35 +226,35 @@ const enableScroll = () => {
 })();
 
 // Desktop submenu
-(function () {
-	const submenuButtons = document?.querySelectorAll(".menu__button");
+// (function () {
+// 	const submenuButtons = document?.querySelectorAll(".menu__button");
 
-	submenuButtons.forEach((button) => {
-		button.addEventListener("click", (e) => {
-			button.classList.toggle("menu__button--active");
-			button?.nextElementSibling.classList.toggle("menu__submenu--active");
-		});
+// 	submenuButtons.forEach((button) => {
+// 		button.addEventListener("click", (e) => {
+// 			button.classList.toggle("menu__button--active");
+// 			button?.nextElementSibling.classList.toggle("menu__submenu--active");
+// 		});
 
-		document.addEventListener("click", (e) => {
-			const submenu = button?.nextElementSibling;
-			if (!submenu.contains(e.target) && e.target !== button) {
-				submenu.classList.remove("menu__submenu--active");
-				button.classList.remove("menu__button--active");
-			}
-		});
-	});
+// 		document.addEventListener("click", (e) => {
+// 			const submenu = button?.nextElementSibling;
+// 			if (!submenu.contains(e.target) && e.target !== button) {
+// 				submenu.classList.remove("menu__submenu--active");
+// 				button.classList.remove("menu__button--active");
+// 			}
+// 		});
+// 	});
 
-	const submenuLinks = document.querySelectorAll(".menu__submenu a");
+// 	const submenuLinks = document.querySelectorAll(".menu__submenu a");
 
-	submenuLinks.forEach((link) => {
-		link.addEventListener("click", (e) => {
-			const submenu = link.closest(".menu__submenu");
-			const button = submenu.previousElementSibling;
-			submenu.classList.remove("menu__submenu--active");
-			button.classList.remove("menu__button--active");
-		});
-	});
-})();
+// 	submenuLinks.forEach((link) => {
+// 		link.addEventListener("click", (e) => {
+// 			const submenu = link.closest(".menu__submenu");
+// 			const button = submenu.previousElementSibling;
+// 			submenu.classList.remove("menu__submenu--active");
+// 			button.classList.remove("menu__button--active");
+// 		});
+// 	});
+// })();
 
 // Intro slider
 (function () {
