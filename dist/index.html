@@ -40,10 +40,10 @@
 		crossorigin
 	/>
 
-    <link rel="stylesheet" href="css/vendor.min.css?_v=20240522122255" />
-    <link rel="stylesheet" href="css/app.min.css?_v=20240522122255" />
+    <link rel="stylesheet" href="css/vendor.min.css?_v=20240522160756" />
+    <link rel="stylesheet" href="css/app.min.css?_v=20240522160756" />
 
-    <script defer src="js/app.min.js?_v=20240522122255"></script>
+    <script defer src="js/app.min.js?_v=20240522160756"></script>
     <title>Главная</title>
 </head>
 
@@ -73,47 +73,63 @@
                     <img src="img/icons/phone-white.svg" alt="" />
                 </button>
             </div>
-            <nav class="header__menu menu">
+            <nav class="header__menu menu" data-menu>
                 <ul class="menu__list">
                     <li>
-                        <button class="menu__button">
+                        <a class="menu__button" href="#">
                             О компании
-                            <svg
-								width="8"
-								height="5"
-								viewBox="0 0 8 5"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-                                <path
-									d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
-									fill="#393939"
-								/>
-                            </svg>
-                        </button>
+                            <span class="menu__arrow"
+								><svg
+									width="8"
+									height="5"
+									viewBox="0 0 8 5"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+                                    <path
+										d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
+										fill="#393939"
+									/>
+                                </svg>
+                            </span>
+                        </a>
                         <ul class="menu__submenu">
+                            <li>
+                                <button class="menu__submenu-back">
+                                    <img src="img/icons/chevron.svg" alt="" />Назад
+                                </button>
+                            </li>
+                            <li><a class="menu__submenu-title" href="#">О компании</a></li>
                             <li><a href="#">Наша команда</a></li>
                             <li><a href="#">Наша жизнь</a></li>
                             <li><a href="#">Наши достижения</a></li>
                         </ul>
                     </li>
                     <li>
-                        <button class="menu__button">
+                        <a class="menu__button" href="#">
                             Продукция
-                            <svg
-								width="8"
-								height="5"
-								viewBox="0 0 8 5"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-                                <path
-									d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
-									fill="#393939"
-								/>
-                            </svg>
-                        </button>
+                            <span class="menu__arrow"
+								><svg
+									width="8"
+									height="5"
+									viewBox="0 0 8 5"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+                                    <path
+										d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
+										fill="#393939"
+									/>
+                                </svg>
+                            </span>
+                        </a>
                         <ul class="menu__submenu">
+                            <li>
+                                <button class="menu__submenu-back">
+                                    <img src="img/icons/chevron.svg" alt="" />Назад
+                                </button>
+                            </li>
+                            <li><a class="menu__submenu-title" href="#">Продукция</a></li>
                             <li><a href="#">Хлебцы</a></li>
                             <li><a href="#">Батончики</a></li>
                             <li><a href="#">Подушечки</a></li>
@@ -124,22 +140,30 @@
                         </ul>
                     </li>
                     <li>
-                        <button class="menu__button">
+                        <a class="menu__button" href="#">
                             Партнерам
-                            <svg
-								width="8"
-								height="5"
-								viewBox="0 0 8 5"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-                                <path
-									d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
-									fill="#393939"
-								/>
-                            </svg>
-                        </button>
+                            <span class="menu__arrow"
+								><svg
+									width="8"
+									height="5"
+									viewBox="0 0 8 5"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+                                    <path
+										d="M0.943333 0L4 3.09171L7.05667 0L8 0.954147L4 5L0 0.954147L0.943333 0Z"
+										fill="#393939"
+									/>
+                                </svg>
+                            </span>
+                        </a>
                         <ul class="menu__submenu">
+                            <li>
+                                <button class="menu__submenu-back">
+                                    <img src="img/icons/chevron.svg" alt="" />Назад
+                                </button>
+                            </li>
+                            <li><a class="menu__submenu-title" href="#">Партнерам</a></li>
                             <li><a href="#">Логистика</a></li>
                             <li><a href="#">Аренда склада и оборудования</a></li>
                             <li><a href="#">Экспорт</a></li>
@@ -161,68 +185,6 @@
         </div>
     </div>
 </header>
-
-<nav class="header__menu-mobile mobile-menu" data-mobile-menu>
-    <ul class="mobile-menu__list">
-        <li>
-            <button class="mobile-menu__button">
-                О компании <img src="img/icons/mm-arrow-right.svg" alt="" />
-            </button>
-            <ul class="mobile-menu__submenu">
-                <li>
-                    <button class="mobile-menu__submenu-back">
-                        <img src="img/icons/mm-arrow-left.svg" alt="" />Назад
-                    </button>
-                </li>
-                <li><p class="mobile-menu__submenu-title">О компании</p></li>
-                <li><a href="#">Наша команда</a></li>
-                <li><a href="#">Наша жизнь</a></li>
-                <li><a href="#">Наши достижения</a></li>
-            </ul>
-        </li>
-        <li>
-            <button class="mobile-menu__button">
-                Продукция <img src="img/icons/mm-arrow-right.svg" alt="" />
-            </button>
-            <ul class="mobile-menu__submenu">
-                <li>
-                    <button class="mobile-menu__submenu-back">
-                        <img src="img/icons/mm-arrow-left.svg" alt="" />Назад
-                    </button>
-                </li>
-                <li><p class="mobile-menu__submenu-title">Продукция</p></li>
-                <li><a href="#">Хлебцы</a></li>
-                <li><a href="#">Батончики</a></li>
-                <li><a href="#">Подушечки</a></li>
-                <li><a href="#">Кукурузные палочки</a></li>
-                <li><a href="#">Глазурь</a></li>
-                <li><a href="#">Весовая продукция</a></li>
-                <li><a href="#">Крупы</a></li>
-            </ul>
-        </li>
-        <li>
-            <button class="mobile-menu__button">
-                Партнерам <img src="img/icons/mm-arrow-right.svg" alt="" />
-            </button>
-            <ul class="mobile-menu__submenu">
-                <li>
-                    <button class="mobile-menu__submenu-back">
-                        <img src="img/icons/mm-arrow-left.svg" alt="" />Назад
-                    </button>
-                </li>
-                <li><p class="mobile-menu__submenu-title">Партнерам</p></li>
-                <li><a href="#">Логистика</a></li>
-                <li><a href="#">Аренда склада и оборудования</a></li>
-                <li><a href="#">Экспорт</a></li>
-                <li><a href="#">Оплата и доставка</a></li>
-                <li><a href="#">Где купить</a></li>
-                <li><a href="#">Каталоги и бланки</a></li>
-            </ul>
-        </li>
-        <li><a class="mobile-menu__link" href="#">Вакансии</a></li>
-        <li><a class="mobile-menu__link" href="#">Контакты</a></li>
-    </ul>
-</nav>
 
             <main class="main">
                 <section class="waves-section waves-section--right intro" id="section-intro">

@@ -170,22 +170,34 @@ const enableScroll = () => {
 // Burger
 (function () {
 	const burger = document?.querySelector("[data-burger]");
-	const menu = document?.querySelector("[data-mobile-menu]");
+	const menu = document?.querySelector("[data-menu]");
 
 	burger?.addEventListener("click", (e) => {
 		burger?.classList.toggle("burger--active");
-		menu?.classList.toggle("mobile-menu--active");
-		document.body.classList.toggle("dis-scroll");
+		menu?.classList.toggle("menu--active");
+
+		if (menu.classList.contains("menu--active")) {
+			disableScroll();
+		} else {
+			enableScroll();
+		}
 	});
 
-	const submenuLinks = document.querySelectorAll(".mobile-menu a");
+	const submenuLinks = document.querySelectorAll(".menu a");
 
 	submenuLinks.forEach((link) => {
 		link.addEventListener("click", (e) => {
-			const submenu = link.closest(".mobile-menu");
-			submenu.classList.remove("mobile-menu--active");
-			burger?.classList.remove("burger--active");
-			document.body.classList.remove("dis-scroll");
+			const clickedElement = e.target;
+			const parentContainsClickedElement = link.contains(clickedElement);
+
+			if (parentContainsClickedElement) {
+				if (clickedElement === link && link.contains(clickedElement)) {
+					const submenu = link.closest(".menu");
+					submenu.classList.remove("menu--active");
+					burger?.classList.remove("burger--active");
+					enableScroll();
+				}
+			}
 		});
 	});
 
@@ -194,11 +206,12 @@ const enableScroll = () => {
 		const largeScreenWidth = 1200;
 
 		if (screenWidth >= largeScreenWidth) {
-			if (menu.classList.contains("mobile-menu--active")) {
-				menu.classList.remove("mobile-menu--active");
-				burger?.classList.remove("burger--active");
-				document.body.classList.remove("dis-scroll");
-			}
+			menu.classList.remove("menu--active");
+			burger?.classList.remove("burger--active");
+			enableScroll();
+			document.querySelectorAll(".menu__submenu").forEach((submenu) => {
+				submenu.classList.remove("menu__submenu--active");
+			});
 		}
 	}
 
@@ -208,53 +221,26 @@ const enableScroll = () => {
 
 // Mobile submenu
 (function () {
-	const submenuButtons = document?.querySelectorAll(".mobile-menu__button");
+	const submenuButtons = document?.querySelectorAll(".menu__arrow");
 
 	submenuButtons.forEach((button) => {
 		button.addEventListener("click", (e) => {
-			button?.nextElementSibling.classList.add("mobile-menu__submenu--active");
+			e.preventDefault();
 
-			button.parentElement
-				?.querySelector(".mobile-menu__submenu-back")
+			button.parentElement.nextElementSibling.classList.add(
+				"menu__submenu--active"
+			);
+
+			button.parentElement.parentElement
+				?.querySelector(".menu__submenu-back")
 				?.addEventListener("click", (e) => {
-					button?.nextElementSibling.classList.remove(
-						"mobile-menu__submenu--active"
+					button?.parentElement.nextElementSibling.classList.remove(
+						"menu__submenu--active"
 					);
 				});
 		});
 	});
 })();
-
-// Desktop submenu
-// (function () {
-// 	const submenuButtons = document?.querySelectorAll(".menu__button");
-
-// 	submenuButtons.forEach((button) => {
-// 		button.addEventListener("click", (e) => {
-// 			button.classList.toggle("menu__button--active");
-// 			button?.nextElementSibling.classList.toggle("menu__submenu--active");
-// 		});
-
-// 		document.addEventListener("click", (e) => {
-// 			const submenu = button?.nextElementSibling;
-// 			if (!submenu.contains(e.target) && e.target !== button) {
-// 				submenu.classList.remove("menu__submenu--active");
-// 				button.classList.remove("menu__button--active");
-// 			}
-// 		});
-// 	});
-
-// 	const submenuLinks = document.querySelectorAll(".menu__submenu a");
-
-// 	submenuLinks.forEach((link) => {
-// 		link.addEventListener("click", (e) => {
-// 			const submenu = link.closest(".menu__submenu");
-// 			const button = submenu.previousElementSibling;
-// 			submenu.classList.remove("menu__submenu--active");
-// 			button.classList.remove("menu__button--active");
-// 		});
-// 	});
-// })();
 
 // Intro slider
 (function () {

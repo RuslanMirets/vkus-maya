@@ -685,7 +685,7 @@ a {
 }
 
 .mobile-menu {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 10rem;
   bottom: 0;
@@ -693,6 +693,7 @@ a {
   display: none;
   overflow-y: auto;
   width: 100%;
+  height: 100vh;
   background-color: var(--color-white);
 }
 
@@ -704,6 +705,7 @@ a {
 .mobile-menu__list li button,
 .mobile-menu__list li p {
   padding: 1.9rem 2rem;
+  width: 100%;
 }
 
 .mobile-menu__list li:first-child {
@@ -720,7 +722,6 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 100%;
 }
 
 .mobile-menu__button img {
@@ -770,7 +771,108 @@ a {
 }
 
 .menu {
+  position: absolute;
+  left: 0;
+  top: 10rem;
+  bottom: 0;
+  z-index: 1300;
   display: none;
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.menu__list {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.menu__list li {
+  border-bottom: 0.3rem solid var(--color-blue-gray);
+}
+
+.menu__list li a,
+.menu__list li button,
+.menu__list li p {
+  padding: 1.9rem 2rem;
+  width: 100%;
+}
+
+.menu__list li:first-child {
+  border-top: 0.3rem solid var(--color-blue-gray);
+}
+
+.menu__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.menu__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 1rem;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.menu__arrow svg {
+  width: 0.8rem;
+  height: 0.5rem;
+}
+
+.menu__submenu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1400;
+  display: none;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+}
+
+.menu__submenu--active {
+  display: block;
+}
+
+.menu__submenu-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.menu__submenu-back img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 0.8rem;
+  height: 0.5rem;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.menu__submenu-title {
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.menu--active {
+  display: block;
 }
 
 .intro {
@@ -1763,6 +1865,14 @@ a {
     top: 14.6rem;
   }
 
+  .menu__submenu-back {
+    gap: 2.5rem;
+  }
+
+  .menu {
+    top: 14.6rem;
+  }
+
   .intro__item--1 {
     padding-top: 3rem;
   }
@@ -2184,6 +2294,16 @@ a {
     background-color: var(--color-red);
   }
 
+  .menu__list li a,
+  .menu__list li button,
+  .menu__list li p {
+    padding: 0;
+  }
+
+  .menu__list li:first-child {
+    border: none;
+  }
+
   .menu__list li {
     position: relative;
   }
@@ -2216,6 +2336,10 @@ a {
     display: flex;
   }
 
+  .menu__list li {
+    border: none;
+  }
+
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2223,14 +2347,8 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    overflow-y: initial;
     gap: 5.9rem;
-  }
-
-  .menu__button svg {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    width: 0.8rem;
-    height: 0.5rem;
   }
 
   .menu__button {
@@ -2243,12 +2361,22 @@ a {
     gap: 0.1rem;
   }
 
+  .menu__arrow {
+    padding: 0;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    pointer-events: none;
+  }
+
+  .menu__submenu li:nth-child(1),
+  .menu__submenu li:nth-child(2) {
+    display: none;
+  }
+
   .menu__submenu {
-    position: absolute;
     left: -70%;
     top: 120%;
-    z-index: 1300;
-    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2256,12 +2384,13 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    overflow-y: initial;
     border: 0.3rem solid var(--color-blue-gray);
     border-radius: 3.5rem;
     padding: 1.6rem;
     width: 30rem;
+    height: initial;
     text-align: center;
-    background-color: var(--color-white);
     gap: 2rem;
   }
 
@@ -2281,7 +2410,9 @@ a {
   }
 
   .menu {
+    position: static;
     display: block;
+    width: auto;
   }
 
   .intro__swiper .swiper-slide {
