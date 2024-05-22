@@ -50,9 +50,9 @@ html {
 		font-size: calc(1vw / 1.92);
 	}
 
-	// @media (min-width: 1920px) {
-	// 	font-size: 62.5%;
-	// }
+	@media (min-width: 1920px) {
+		font-size: 62.5%;
+	}
 }
 
 *,
