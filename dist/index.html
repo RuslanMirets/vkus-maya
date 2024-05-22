@@ -227,6 +227,7 @@
             <main class="main">
                 <section class="waves-section waves-section--right intro" id="section-intro">
     <div class="container">
+        <h1>Вкус мая — полезное питание</h1>
         <div class="swiper intro__swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -242,7 +243,7 @@
                         </picture>
                         <div class="intro__item-content">
                             <p class="subtitle">Без использования консервантов и ГМО</p>
-                            <p class="title intro__item-title">Натуральный продукт</p>
+                            <h2 class="title intro__item-title">Натуральный продукт</h2>
                             <div class="intro__item-text">
                                 <p>
                                     Наша вкусная продукция от компании «Вкус Мая», подарит всем
@@ -272,7 +273,7 @@
                         </picture>
                         <div class="intro__item-content">
                             <p class="subtitle">Не содержат дрожжей и консервантов</p>
-                            <p class="title intro__item-title">идеальны для перекуса</p>
+                            <h2 class="title intro__item-title">идеальны для перекуса</h2>
                             <div class="intro__item-text">
                                 <p>
                                     Ассортимент: ржаные с луком «Оригинальные», ржаные с томатом,
@@ -304,7 +305,7 @@
                         </picture>
                         <div class="intro__item-content">
                             <p class="subtitle">Сладкий снек, для детей и взрослых</p>
-                            <p class="title intro__item-title">Новинка МИНДАЛИКИ</p>
+                            <h2 class="title intro__item-title">Новинка МИНДАЛИКИ</h2>
                             <div class="intro__item-text">
                                 <ul>
                                     <li>
@@ -1927,11 +1928,15 @@
 
         <form class="request__form form-request">
             <label class="label">
-                <p>Ваше имя<span class="highlight">*</span>:</p>
+                <span class="label__text"
+					>Ваше имя<span class="highlight">*</span>:</span
+				>
                 <input class="input" type="text" name="name" placeholder="Имя" />
             </label>
             <label class="label">
-                <p>Название организации<span class="highlight">*</span>:</p>
+                <span class="label__text"
+					>Название организации<span class="highlight">*</span>:</span
+				>
                 <input
 					class="input"
 					type="text"
@@ -1940,15 +1945,19 @@
 				/>
             </label>
             <label class="label">
-                <p>Город<span class="highlight">*</span>:</p>
+                <span class="label__text">Город<span class="highlight">*</span>:</span>
                 <input class="input" type="text" name="city" placeholder="Москва" />
             </label>
             <label class="label">
-                <p>Ваш e-mail<span class="highlight">*</span>:</p>
+                <span class="label__text"
+					>Ваш e-mail<span class="highlight">*</span>:</span
+				>
                 <input class="input" type="email" name="email" placeholder="_@_" />
             </label>
             <label class="label">
-                <p>Ваш телефон<span class="highlight">*</span>:</p>
+                <span class="label__text"
+					>Ваш телефон<span class="highlight">*</span>:</span
+				>
                 <input
 					class="input"
 					type="tel"
@@ -1969,18 +1978,15 @@
     </div>
 </section>
 
-                <section class="map" id="section-map">
+                <div class="map" id="section-map">
     <button class="map__button">
         <img src="img/icons/triangle.svg" alt="" />
     </button>
     <iframe
 		class="map__iframe"
 		src="https://yandex.ru/map-widget/v1/?um=constructor%3Abb7a97456c88c6035e74de6c06615ae705b846878c6e44fd2781d78e76e0c382&amp;source=constructor&amp;scroll=false"
-		width="100%"
-		height="551"
-		frameborder="0"
 	></iframe>
-</section>
+</div>
 
             </main>
             <footer class="footer">
@@ -2026,11 +2032,15 @@
                     <h2 class="form-modal__title">Заказать звонок</h2>
                     <form class="form-modal__form">
                         <label class="label">
-                            <p>Ваше имя<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Ваше имя<span class="highlight">*</span>:</span
+							>
                             <input class="input" type="text" name="name" placeholder="Имя" />
                         </label>
                         <label class="label">
-                            <p>Название организации<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Название организации<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="text"
@@ -2039,7 +2049,9 @@
 							/>
                         </label>
                         <label class="label">
-                            <p>Город<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Город<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="text"
@@ -2048,7 +2060,9 @@
 							/>
                         </label>
                         <label class="label">
-                            <p>Ваш e-mail<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Ваш e-mail<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="email"
@@ -2057,7 +2071,9 @@
 							/>
                         </label>
                         <label class="label">
-                            <p>Ваш телефон<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Ваш телефон<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="tel"
@@ -2098,11 +2114,15 @@
                     <h2 class="form-modal__title">Заказать прайс-⁠лист</h2>
                     <form class="form-modal__form">
                         <label class="label">
-                            <p>Ваше имя<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Ваше имя<span class="highlight">*</span>:</span
+							>
                             <input class="input" type="text" name="name" placeholder="Имя" />
                         </label>
                         <label class="label">
-                            <p>Название организации<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Название организации<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="text"
@@ -2111,7 +2131,9 @@
 							/>
                         </label>
                         <label class="label">
-                            <p>Город<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Город<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="text"
@@ -2120,7 +2142,9 @@
 							/>
                         </label>
                         <label class="label">
-                            <p>Ваш e-mail<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Ваш e-mail<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="email"
@@ -2129,7 +2153,9 @@
 							/>
                         </label>
                         <label class="label">
-                            <p>Ваш телефон<span class="highlight">*</span>:</p>
+                            <span class="label__text"
+								>Ваш телефон<span class="highlight">*</span>:</span
+							>
                             <input
 								class="input"
 								type="tel"

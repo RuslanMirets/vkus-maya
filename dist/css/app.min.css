@@ -367,7 +367,7 @@ a {
   gap: 0.7rem;
 }
 
-.label p {
+.label__text {
   padding-left: 2rem;
   font-weight: 500;
   font-size: 2rem;
@@ -733,6 +733,11 @@ a {
 .intro {
   margin-bottom: 1.5rem;
   padding-bottom: 4.5rem;
+}
+
+.intro h1 {
+  line-height: 0;
+  visibility: hidden;
 }
 
 .intro__swiper .swiper-slide {
@@ -1467,6 +1472,7 @@ a {
 
 .map__iframe {
   display: block;
+  border: none;
   width: 100%;
   height: 29.7rem;
 }
@@ -1959,7 +1965,7 @@ a {
     text-align: left;
   }
 
-  .label p {
+  .label__text {
     padding: 0 3.7rem;
   }
 
