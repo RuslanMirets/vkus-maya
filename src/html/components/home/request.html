@@ -7,11 +7,12 @@
 		<h2 class="title">Оставьте заявку на прайс лист</h2>
 
 		<form class="request__form form-request">
-			<label class="label">
+			<label class="label error">
 				<span class="label__text"
 					>Ваше имя<span class="highlight">*</span>:</span
 				>
 				<input class="input" type="text" name="name" placeholder="Имя" />
+				<span class="label__error">*Обязательное поле для заполнение</span>
 			</label>
 			<label class="label">
 				<span class="label__text"
@@ -23,16 +24,19 @@
 					name="organization"
 					placeholder="ООО “Компания”"
 				/>
+				<span class="label__error">*Обязательное поле для заполнение</span>
 			</label>
 			<label class="label">
 				<span class="label__text">Город<span class="highlight">*</span>:</span>
 				<input class="input" type="text" name="city" placeholder="Москва" />
+				<span class="label__error">*Обязательное поле для заполнение</span>
 			</label>
 			<label class="label">
 				<span class="label__text"
 					>Ваш e-mail<span class="highlight">*</span>:</span
 				>
 				<input class="input" type="email" name="email" placeholder="_@_" />
+				<span class="label__error">*Обязательное поле для заполнение</span>
 			</label>
 			<label class="label">
 				<span class="label__text"
@@ -44,6 +48,7 @@
 					name="phone"
 					placeholder="+7 999 999 99 99"
 				/>
+				<span class="label__error">*Обязательное поле для заполнение</span>
 			</label>
 			<button class="button form-request__button" type="submit">
 				<span>Получить прайс-лист</span>

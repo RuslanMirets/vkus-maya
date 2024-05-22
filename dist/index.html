@@ -40,10 +40,10 @@
 		crossorigin
 	/>
 
-    <link rel="stylesheet" href="css/vendor.min.css" />
-    <link rel="stylesheet" href="css/app.min.css" />
+    <link rel="stylesheet" href="css/vendor.min.css?_v=20240522115351" />
+    <link rel="stylesheet" href="css/app.min.css?_v=20240522115351" />
 
-    <script defer src="js/app.min.js"></script>
+    <script defer src="js/app.min.js?_v=20240522115351"></script>
     <title>Главная</title>
 </head>
 
@@ -237,7 +237,6 @@
                             <img
 								class="intro__item-img intro__item-img--1"
 								src="img/intro/intro-01.png"
-								loading="lazy"
 								alt="Продукция"
 							/>
                         </picture>
@@ -267,7 +266,6 @@
                             <img
 								class="intro__item-img intro__item-img--2"
 								src="img/intro/intro-02.png"
-								loading="lazy"
 								alt="Продукция"
 							/>
                         </picture>
@@ -299,7 +297,6 @@
                             <img
 								class="intro__item-img intro__item-img--3"
 								src="img/intro/intro-03.png"
-								loading="lazy"
 								alt="Продукция"
 							/>
                         </picture>
@@ -331,9 +328,35 @@
             </div>
 
             <div class="swiper-controls">
-                <div class="swiper-button-prev intro__swiper-button-prev"></div>
+                <div class="swiper-button-prev intro__swiper-button-prev">
+                    <svg
+						width="11"
+						height="17"
+						viewBox="0 0 11 17"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+                        <path
+							d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+							fill="#E72D30"
+						/>
+                    </svg>
+                </div>
                 <div class="swiper-pagination intro__swiper-pagination"></div>
-                <div class="swiper-button-next intro__swiper-button-next"></div>
+                <div class="swiper-button-next intro__swiper-button-next">
+                    <svg
+						width="11"
+						height="17"
+						viewBox="0 0 11 17"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+                        <path
+							d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+							fill="#E72D30"
+						/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
@@ -345,7 +368,7 @@
         <h2 class="title">Продукция компании</h2>
         <ul class="categories__list list-categories">
             <li>
-                <div class="list-categories__item">
+                <a class="list-categories__item" href="#">
                     <picture>
                         <source
 							srcset="img/categories/category-01.webp"
@@ -362,10 +385,10 @@
                         <p class="list-categories__item-subtitle">Идеальны для перекуса!</p>
                         <p class="list-categories__item-title">Хлебцы</p>
                     </div>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="list-categories__item">
+                <a class="list-categories__item" href="#">
                     <picture>
                         <source
 							srcset="img/categories/category-02.webp"
@@ -384,10 +407,10 @@
                         </p>
                         <p class="list-categories__item-title">Батончики</p>
                     </div>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="list-categories__item">
+                <a class="list-categories__item" href="#">
                     <picture>
                         <source
 							srcset="img/categories/category-03.webp"
@@ -406,10 +429,10 @@
                         </p>
                         <p class="list-categories__item-title">Подушечки</p>
                     </div>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="list-categories__item">
+                <a class="list-categories__item" href="#">
                     <picture>
                         <source
 							srcset="img/categories/category-04.webp"
@@ -426,10 +449,10 @@
                         <p class="list-categories__item-subtitle">Трудно остановиться!</p>
                         <p class="list-categories__item-title">Кукурузные палочки</p>
                     </div>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="list-categories__item">
+                <a class="list-categories__item" href="#">
                     <picture>
                         <source
 							srcset="img/categories/category-05.webp"
@@ -446,10 +469,10 @@
                         <p class="list-categories__item-subtitle">Еда которая удивляет!</p>
                         <p class="list-categories__item-title">Весовая продукция</p>
                     </div>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="list-categories__item">
+                <a class="list-categories__item" href="#">
                     <picture>
                         <source
 							srcset="img/categories/category-06.webp"
@@ -466,7 +489,7 @@
                         <p class="list-categories__item-subtitle">Будет очень вкусно!</p>
                         <p class="list-categories__item-title">Новинки</p>
                     </div>
-                </div>
+                </a>
             </li>
         </ul>
     </div>
@@ -722,13 +745,39 @@
                     <div class="swiper-controls">
                         <div
 							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                         <div
 							class="swiper-pagination tabs-products__swiper-pagination"
 						></div>
                         <div
 							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -791,13 +840,39 @@
                     <div class="swiper-controls">
                         <div
 							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                         <div
 							class="swiper-pagination tabs-products__swiper-pagination"
 						></div>
                         <div
 							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -890,13 +965,39 @@
                     <div class="swiper-controls">
                         <div
 							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                         <div
 							class="swiper-pagination tabs-products__swiper-pagination"
 						></div>
                         <div
 							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1041,13 +1142,39 @@
                     <div class="swiper-controls">
                         <div
 							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                         <div
 							class="swiper-pagination tabs-products__swiper-pagination"
 						></div>
                         <div
 							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1162,13 +1289,39 @@
                     <div class="swiper-controls">
                         <div
 							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                         <div
 							class="swiper-pagination tabs-products__swiper-pagination"
 						></div>
                         <div
 							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1259,13 +1412,39 @@
                     <div class="swiper-controls">
                         <div
 							class="swiper-button-prev swiper-button-prev--gray tabs-products__swiper-button-prev"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                         <div
 							class="swiper-pagination tabs-products__swiper-pagination"
 						></div>
                         <div
 							class="swiper-button-next swiper-button-next--gray tabs-products__swiper-button-next"
-						></div>
+						>
+                            <svg
+								width="11"
+								height="17"
+								viewBox="0 0 11 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+                                <path
+									d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+									fill="#E72D30"
+								/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1781,9 +1960,35 @@
             </div>
         </div>
         <div class="swiper-controls">
-            <div class="swiper-button-prev history__swiper-button-prev"></div>
+            <div class="swiper-button-prev history__swiper-button-prev">
+                <svg
+					width="11"
+					height="17"
+					viewBox="0 0 11 17"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+                    <path
+						d="M10.4297 2.05759L4.04016 8.2619L10.4297 14.4662L8.45778 16.3809L0.0963545 8.2619L8.45778 0.142853L10.4297 2.05759Z"
+						fill="#E72D30"
+					/>
+                </svg>
+            </div>
             <div class="swiper-pagination history__swiper-pagination"></div>
-            <div class="swiper-button-next history__swiper-button-next"></div>
+            <div class="swiper-button-next history__swiper-button-next">
+                <svg
+					width="11"
+					height="17"
+					viewBox="0 0 11 17"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+                    <path
+						d="M0.570313 14.9424L6.95984 8.7381L0.570313 2.5338L2.54222 0.619053L10.9036 8.7381L2.54222 16.8571L0.570313 14.9424Z"
+						fill="#E72D30"
+					/>
+                </svg>
+            </div>
         </div>
     </div>
 </section>
@@ -1927,11 +2132,12 @@
         <h2 class="title">Оставьте заявку на прайс лист</h2>
 
         <form class="request__form form-request">
-            <label class="label">
+            <label class="label error">
                 <span class="label__text"
 					>Ваше имя<span class="highlight">*</span>:</span
 				>
                 <input class="input" type="text" name="name" placeholder="Имя" />
+                <span class="label__error">*Обязательное поле для заполнение</span>
             </label>
             <label class="label">
                 <span class="label__text"
@@ -1943,16 +2149,19 @@
 					name="organization"
 					placeholder="ООО “Компания”"
 				/>
+                <span class="label__error">*Обязательное поле для заполнение</span>
             </label>
             <label class="label">
                 <span class="label__text">Город<span class="highlight">*</span>:</span>
                 <input class="input" type="text" name="city" placeholder="Москва" />
+                <span class="label__error">*Обязательное поле для заполнение</span>
             </label>
             <label class="label">
                 <span class="label__text"
 					>Ваш e-mail<span class="highlight">*</span>:</span
 				>
                 <input class="input" type="email" name="email" placeholder="_@_" />
+                <span class="label__error">*Обязательное поле для заполнение</span>
             </label>
             <label class="label">
                 <span class="label__text"
@@ -1964,6 +2173,7 @@
 					name="phone"
 					placeholder="+7 999 999 99 99"
 				/>
+                <span class="label__error">*Обязательное поле для заполнение</span>
             </label>
             <button class="button form-request__button" type="submit">
                 <span>Получить прайс-лист</span>
@@ -2036,6 +2246,9 @@
 								>Ваше имя<span class="highlight">*</span>:</span
 							>
                             <input class="input" type="text" name="name" placeholder="Имя" />
+                            <span class="label__error"
+								>*Обязательное поле для заполнение
+                            </span>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2047,6 +2260,9 @@
 								name="organization"
 								placeholder="ООО “Компания”"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2058,6 +2274,9 @@
 								name="city"
 								placeholder="Москва"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2069,6 +2288,9 @@
 								name="email"
 								placeholder="_@_"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2080,6 +2302,9 @@
 								name="phone"
 								placeholder="+7 999 999 99 99"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <button class="form-modal__form-button" type="submit">
                             Отправить
@@ -2118,6 +2343,9 @@
 								>Ваше имя<span class="highlight">*</span>:</span
 							>
                             <input class="input" type="text" name="name" placeholder="Имя" />
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2129,6 +2357,9 @@
 								name="organization"
 								placeholder="ООО “Компания”"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2140,6 +2371,9 @@
 								name="city"
 								placeholder="Москва"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2151,6 +2385,9 @@
 								name="email"
 								placeholder="_@_"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <label class="label">
                             <span class="label__text"
@@ -2162,6 +2399,9 @@
 								name="phone"
 								placeholder="+7 999 999 99 99"
 							/>
+                            <span class="label__error"
+								>*Обязательное поле для заполнение</span
+							>
                         </label>
                         <button class="form-modal__form-button" type="submit">
                             Отправить
