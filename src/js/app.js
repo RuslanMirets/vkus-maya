@@ -167,12 +167,23 @@ const enableScroll = () => {
 	});
 })();
 
+// Header sticky
+(function () {
+	const header = document.querySelector(".header");
+
+	window.addEventListener("scroll", (e) => {
+		header.classList.toggle("header--sticky", window.scrollY > 0);
+	});
+})();
+
 // Burger
 (function () {
+	const header = document.querySelector(".header");
 	const burger = document?.querySelector("[data-burger]");
 	const menu = document?.querySelector("[data-menu]");
 
 	burger?.addEventListener("click", (e) => {
+		header.classList.toggle("header--shadow");
 		burger?.classList.toggle("burger--active");
 		menu?.classList.toggle("menu--active");
 
@@ -192,6 +203,7 @@ const enableScroll = () => {
 
 			if (parentContainsClickedElement) {
 				if (clickedElement === link && link.contains(clickedElement)) {
+					header.classList.remove("header--shadow");
 					const submenu = link.closest(".menu");
 					submenu.classList.remove("menu--active");
 					burger?.classList.remove("burger--active");
@@ -206,6 +218,7 @@ const enableScroll = () => {
 		const largeScreenWidth = 1200;
 
 		if (screenWidth >= largeScreenWidth) {
+			header.classList.remove("header--shadow");
 			menu.classList.remove("menu--active");
 			burger?.classList.remove("burger--active");
 			enableScroll();
